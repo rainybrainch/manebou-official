@@ -29,8 +29,8 @@ body{font-family:'Zen Maru Gothic',sans-serif;color:var(--dark);overflow-x:hidde
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(26,26,46,0.92);backdrop-filter:blur(16px);border-bottom:3px solid var(--gold);padding:10px 20px;display:flex;align-items:center;justify-content:space-between;}
 .nav-logo{display:flex;align-items:center;gap:10px;}
-.nav-logo-text{font-family:'Dela Gothic One',sans-serif;font-size:16px;color:var(--sky);text-shadow:2px 2px 0 var(--wave-blue);line-height:1.2;}
-.nav-logo-sub{font-size:9px;color:rgba(255,255,255,0.5);font-family:'Zen Maru Gothic',sans-serif;letter-spacing:2px;display:block;}
+.nav-logo-text{font-family:'Dela Gothic One',sans-serif;font-size:18px;color:var(--sky);text-shadow:3px 3px 6px rgba(0,0,0,0.3);line-height:1.2;font-weight:900;letter-spacing:0.05em;}
+.nav-logo-sub{font-size:10px;color:rgba(255,255,255,0.65);font-family:'Zen Maru Gothic',sans-serif;letter-spacing:3px;display:block;font-weight:600;}
 
 /* HAMBURGER */
 .hamburger{width:36px;height:36px;display:flex;flex-direction:column;justify-content:center;gap:6px;cursor:pointer;padding:4px;}
@@ -46,13 +46,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(26,26,46,0.9
 .drawer-overlay.open{display:block;}
 .drawer-menu{list-style:none;display:flex;flex-direction:column;gap:0;}
 .drawer-menu li{border-bottom:1px solid rgba(255,255,255,0.1);}
-.drawer-menu a{display:block;padding:18px 0;color:var(--white);text-decoration:none;font-size:15px;font-weight:500;transition:color 0.2s;}
-.drawer-menu a:hover{color:var(--gold);}
+.drawer-menu a{display:block;padding:20px 12px;color:var(--white);text-decoration:none;font-size:16px;font-weight:600;transition:all 0.3s;border-left:4px solid transparent;margin-left:-12px;}
+.drawer-menu a:hover{color:var(--gold);border-left-color:var(--gold);background:rgba(245,200,66,0.08);}
 
 /* HERO */
 .hero{position:relative;z-index:1;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:100px 20px 60px;text-align:center;}
-.hero h1{font-family:'Dela Gothic One',sans-serif;font-size:clamp(28px,6vw,44px);color:var(--white);margin-bottom:16px;animation:fadeUp 0.8s ease 0.2s both;}
-.hero-subtitle{font-size:clamp(14px,3vw,18px);color:rgba(255,255,255,0.9);margin-bottom:32px;animation:fadeUp 0.8s ease 0.3s both;line-height:1.6;}
+.hero h1{font-family:'Dela Gothic One',sans-serif;font-size:clamp(36px,8vw,56px);color:var(--white);margin-bottom:20px;animation:fadeUp 0.8s ease 0.2s both;font-weight:900;letter-spacing:0.08em;text-shadow:4px 4px 12px rgba(0,0,0,0.4);}
+.hero-subtitle{font-size:clamp(15px,3.5vw,20px);color:rgba(255,255,255,0.95);margin-bottom:40px;animation:fadeUp 0.8s ease 0.3s both;line-height:1.8;font-weight:500;}
 .hero-concept{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:500px;margin:40px auto;animation:fadeUp 0.8s ease 0.4s both;}
 .concept-card{background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);border:2px solid rgba(255,255,255,0.2);border-radius:16px;padding:20px;color:var(--white);}
 .concept-card-title{font-family:'Dela Gothic One',sans-serif;font-size:24px;margin-bottom:8px;}
@@ -67,17 +67,18 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(26,26,46,0.9
 section{position:relative;z-index:1;background:var(--white);margin:40px auto;padding:60px 20px;border-radius:24px;box-shadow:0 12px 48px rgba(0,0,0,0.12);max-width:1200px;transform:translateY(0);transition:transform 0.3s ease;animation:slideInUp 0.6s ease-out;}
 section:hover{box-shadow:0 16px 64px rgba(0,0,0,0.15);}
 .container{max-width:1200px;margin:0 auto;}
-section h2{font-family:'Dela Gothic One',sans-serif;font-size:clamp(28px,6vw,42px);color:var(--dark);margin-bottom:40px;text-align:center;border-bottom:4px solid var(--gold);padding-bottom:24px;letter-spacing:0.05em;}
+section h2{font-family:'Dela Gothic One',sans-serif;font-size:clamp(32px,7vw,48px);color:var(--dark);margin-bottom:48px;text-align:center;border-bottom:5px solid var(--gold);padding-bottom:28px;letter-spacing:0.08em;font-weight:900;}
 @keyframes slideInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
 
 /* SECTION: CONCEPT */
 .concept-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;margin:40px 0;}
-.concept-text h3{font-family:'Dela Gothic One',sans-serif;font-size:20px;color:var(--dark);margin:20px 0 12px;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:8px;}
-.concept-text p{font-size:14px;line-height:1.8;color:#555;margin-bottom:16px;}
+.concept-text h3{font-family:'Dela Gothic One',sans-serif;font-size:24px;color:var(--dark);margin:28px 0 16px;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:10px;font-weight:900;}
+.concept-text p{font-size:15px;line-height:2;color:#444;margin-bottom:20px;font-weight:500;}
 .concept-chars{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
-.char-card{background:linear-gradient(135deg, rgba(91,200,232,0.1) 0%, rgba(155,109,214,0.1) 100%);border:2px solid rgba(91,200,232,0.3);border-radius:16px;padding:20px;text-align:center;}
-.char-card-name{font-family:'Dela Gothic One',sans-serif;font-size:16px;color:var(--dark);margin-bottom:8px;}
-.char-card-role{font-size:12px;color:#888;font-weight:600;}
+.char-card{background:linear-gradient(135deg, rgba(91,200,232,0.15) 0%, rgba(155,109,214,0.15) 100%);border:3px solid rgba(91,200,232,0.4);border-radius:20px;padding:28px;text-align:center;transition:all 0.3s ease;}
+.char-card:hover{border-color:var(--sky);box-shadow:0 8px 24px rgba(91,200,232,0.2);}
+.char-card-name{font-family:'Dela Gothic One',sans-serif;font-size:20px;color:var(--dark);margin-bottom:10px;font-weight:900;}
+.char-card-role{font-size:13px;color:#666;font-weight:700;letter-spacing:0.05em;}
 
 /* SECTION: FLOW */
 .flow-diagram{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin:40px 0;}
@@ -93,16 +94,17 @@ section h2{font-family:'Dela Gothic One',sans-serif;font-size:clamp(28px,6vw,42p
 .monthly-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.8) 100%);opacity:0;transition:opacity 0.3s;}
 .monthly-card:hover{transform:translateY(-12px) scale(1.03);box-shadow:0 16px 48px rgba(245,200,66,0.25);border-color:var(--gold-dark);}
 .monthly-card:hover::before{opacity:1;}
-.monthly-card h4{font-family:'Dela Gothic One',sans-serif;font-size:18px;color:var(--dark);margin-bottom:12px;}
-.monthly-label{display:inline-block;background:var(--gold);color:var(--dark);padding:6px 12px;border-radius:20px;font-size:11px;font-weight:700;margin-bottom:12px;}
-.monthly-desc{font-size:12px;color:#666;line-height:1.6;}
+.monthly-card h4{font-family:'Dela Gothic One',sans-serif;font-size:20px;color:var(--dark);margin-bottom:14px;font-weight:900;}
+.monthly-label{display:inline-block;background:linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);color:var(--dark);padding:8px 16px;border-radius:20px;font-size:12px;font-weight:800;margin-bottom:14px;box-shadow:0 4px 12px rgba(245,200,66,0.3);}
+.monthly-desc{font-size:13px;color:#555;line-height:1.8;font-weight:500;}
 
 /* SECTION: WORLD */
 .world-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;margin:40px 0;}
-.world-feature{background:linear-gradient(135deg, rgba(244,180,65,0.1) 0%, rgba(228,53,74,0.1) 100%);border-left:4px solid var(--gold);padding:20px;margin:12px 0;border-radius:8px;}
-.world-feature strong{color:var(--red);font-weight:700;}
-.world-items{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:20px 0;}
-.world-item{background:rgba(91,200,232,0.1);border:2px solid var(--sky);border-radius:12px;padding:16px;text-align:center;font-size:12px;color:var(--dark);}
+.world-feature{background:linear-gradient(135deg, rgba(244,180,65,0.15) 0%, rgba(228,53,74,0.1) 100%);border-left:5px solid var(--gold);padding:24px;margin:16px 0;border-radius:12px;font-size:14px;line-height:1.8;}
+.world-feature strong{color:var(--red);font-weight:900;font-size:15px;}
+.world-items{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin:24px 0;}
+.world-item{background:linear-gradient(135deg, rgba(91,200,232,0.12) 0%, rgba(91,200,232,0.05) 100%);border:3px solid var(--sky);border-radius:14px;padding:20px;text-align:center;font-size:13px;color:var(--dark);font-weight:600;transition:all 0.3s;}
+.world-item:hover{transform:translateY(-4px);border-color:#3DB7E8;box-shadow:0 8px 20px rgba(91,200,232,0.2);}
 .world-item-emoji{font-size:28px;margin-bottom:8px;}
 
 /* SECTION: VALUE */
