@@ -42,44 +42,51 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(26,26,46,0.9
 .drawer-menu a:hover{color:var(--gold);border-left-color:var(--gold);background:rgba(245,200,66,0.08);}
 
 /* HEADER */
-.gallery-header{position:relative;z-index:1;min-height:50vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:100px 20px 80px;text-align:center;}
-.gallery-header h1{font-family:'Dela Gothic One',sans-serif;font-size:clamp(36px,8vw,56px);color:var(--white);margin-bottom:20px;animation:fadeUp 0.8s ease 0.2s both;font-weight:900;letter-spacing:0.08em;text-shadow:4px 4px 12px rgba(0,0,0,0.4);}
-.gallery-header p{font-size:clamp(15px,3.5vw,18px);color:rgba(255,255,255,0.95);margin-bottom:24px;animation:fadeUp 0.8s ease 0.3s both;line-height:1.8;font-weight:500;}
+.gallery-header{position:relative;z-index:1;min-height:55vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:120px 20px 100px;text-align:center;}
+.gallery-header h1{font-family:'Dela Gothic One',sans-serif;font-size:clamp(44px,10vw,64px);color:var(--white);margin-bottom:28px;animation:fadeUp 0.8s ease 0.2s both;font-weight:700;letter-spacing:0.08em;text-shadow:6px 6px 16px rgba(0,0,0,0.5);}
+.gallery-header p{font-size:clamp(16px,4vw,22px);color:rgba(255,255,255,0.98);margin-bottom:32px;animation:fadeUp 0.8s ease 0.3s both;line-height:1.9;font-weight:400;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 
 /* GALLERY */
-.gallery-container{position:relative;z-index:1;max-width:1100px;margin:40px auto;padding:40px 20px;}
-.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;margin:40px 0;perspective:1000px;}
-.poster-card{background:var(--white);border-radius:20px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,0.15);transition:all 0.4s cubic-bezier(0.34,1.56,0.64,1);position:relative;border:2px solid rgba(245,200,66,0.1);}
-.poster-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg, rgba(255,255,255,0.8) 0%, transparent 50%);opacity:0;transition:opacity 0.4s;pointer-events:none;z-index:10;}
-.poster-card:hover{transform:translateY(-16px) scale(1.04);box-shadow:0 20px 60px rgba(0,0,0,0.25),0 0 40px rgba(245,200,66,0.2);border-color:var(--gold);}
+.gallery-container{position:relative;z-index:1;max-width:1200px;margin:60px auto;padding:60px 40px;}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:44px;margin:48px 0;perspective:1000px;}
+.poster-card{background:var(--white);border-radius:24px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,0.12);transition:all 0.4s cubic-bezier(0.25,0.46,0.45,0.94);position:relative;border:none;}
+.poster-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg, rgba(255,255,255,0.7) 0%, transparent 55%);opacity:0;transition:opacity 0.4s;pointer-events:none;z-index:10;}
+.poster-card:hover{transform:translateY(-18px) scale(1.06);box-shadow:0 24px 72px rgba(0,0,0,0.16),0 0 32px rgba(245,200,66,0.15);}
 .poster-card:hover::before{opacity:1;}
 .poster-image{width:100%;height:auto;display:block;background:linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);transition:transform 0.4s;position:relative;}
-.poster-card:hover .poster-image{transform:scale(1.08);}
-.poster-info{padding:32px 24px;background:linear-gradient(180deg, var(--white) 0%, #fafafa 100%);}
+.poster-card:hover .poster-image{transform:scale(1.1);}
+.poster-info{padding:40px 32px;background:linear-gradient(180deg, var(--white) 0%, #fafafa 100%);}
 .poster-title{font-family:'Dela Gothic One',sans-serif;font-size:20px;color:var(--dark);margin-bottom:16px;text-align:center;font-weight:900;letter-spacing:0.05em;}
 .poster-desc{font-size:13px;color:#555;line-height:1.9;text-align:center;font-weight:500;}
 
 /* ABOUT POSTERS */
-.about-section{position:relative;z-index:1;background:linear-gradient(135deg, var(--white) 0%, #f9f9f9 100%);margin:80px auto;padding:60px 40px;border-radius:24px;box-shadow:0 16px 56px rgba(0,0,0,0.12);max-width:1100px;border:2px solid rgba(245,200,66,0.1);}
-.container{max-width:1100px;margin:0 auto;}
-.about-section h2{font-family:'Dela Gothic One',sans-serif;font-size:32px;color:var(--dark);margin-bottom:48px;text-align:center;border-bottom:5px solid var(--gold);padding-bottom:28px;letter-spacing:0.08em;font-weight:900;}
-.about-content{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
-.about-text h3{font-family:'Dela Gothic One',sans-serif;font-size:20px;color:var(--dark);margin:24px 0 14px;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:10px;font-weight:900;}
-.about-text p{font-size:14px;line-height:1.9;color:#555;margin-bottom:18px;font-weight:500;}
-.about-visual{background:linear-gradient(135deg, rgba(91,200,232,0.2) 0%, rgba(155,109,214,0.1) 100%);border:3px solid var(--gold);border-radius:16px;padding:60px;text-align:center;font-size:56px;box-shadow:inset 0 4px 12px rgba(0,0,0,0.05);}
+.about-section{position:relative;z-index:1;background:linear-gradient(135deg, var(--white) 0%, #f9f9f9 100%);margin:100px auto;padding:80px 50px;border-radius:32px;box-shadow:0 20px 64px rgba(0,0,0,0.14);max-width:1200px;border:none;}
+.container{max-width:1200px;margin:0 auto;}
+.about-section h2{font-family:'Dela Gothic One',sans-serif;font-size:40px;color:var(--dark);margin-bottom:56px;text-align:center;border-bottom:5px solid var(--gold);padding-bottom:32px;letter-spacing:0.08em;font-weight:700;}
+.about-content{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+.about-text h3{font-family:'Dela Gothic One',sans-serif;font-size:22px;color:var(--dark);margin:28px 0 16px;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:10px;font-weight:700;}
+.about-text p{font-size:15px;line-height:1.9;color:#555;margin-bottom:20px;font-weight:400;}
+.about-visual{background:linear-gradient(135deg, rgba(91,200,232,0.2) 0%, rgba(155,109,214,0.1) 100%);border:2px solid rgba(245,200,66,0.5);border-radius:20px;padding:70px;text-align:center;font-size:60px;box-shadow:inset 0 4px 12px rgba(0,0,0,0.04);}
 
 /* FOOTER */
-footer{position:relative;z-index:1;background:var(--dark);color:var(--white);padding:40px 20px;text-align:center;margin-top:60px;}
-footer p{font-size:12px;opacity:0.7;}
+footer{position:relative;z-index:1;background:linear-gradient(180deg, var(--dark) 0%, #0d0d1a 100%);color:var(--white);padding:60px 20px;text-align:center;margin-top:80px;border-top:2px solid rgba(245,200,66,0.15);}
+footer p{font-size:13px;opacity:0.75;font-weight:400;letter-spacing:0.05em;}
 
 /* RESPONSIVE */
 @media(max-width:768px){
-  .gallery-grid{grid-template-columns:1fr;}
-  .about-content{grid-template-columns:1fr;}
+  .gallery-header{padding:100px 20px 80px;}
+  .gallery-header h1{font-size:clamp(36px,8vw,48px);margin-bottom:20px;}
+  .gallery-container{margin:60px auto;padding:40px 24px;}
+  .gallery-grid{grid-template-columns:1fr;gap:32px;}
+  .poster-info{padding:32px 24px;}
+  .about-section{margin:60px auto;padding:50px 28px;border-radius:28px;}
+  .about-section h2{font-size:clamp(32px,7vw,40px);margin-bottom:40px;padding-bottom:24px;}
+  .about-content{grid-template-columns:1fr;gap:36px;}
+  .about-visual{padding:50px;}
   nav{padding:10px 10px;}
-  .nav-logo-text{font-size:14px;}
-  .nav-back{font-size:11px;padding:6px 12px;}
+  .nav-logo-text{font-size:16px;}
+  .nav-back{font-size:12px;padding:8px 14px;}
 }
 </style>
 </head>
