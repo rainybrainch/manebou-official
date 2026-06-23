@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>マネぼう構想2026 - <ruby>政策<rt>せいさく</rt></ruby><ruby>ポスター<rt>ぽすたー</rt></ruby></title>
+<meta name="description" content="マネぼう構想2026の政策ポスター集。各キャラクターが提唱する政策や方針をビジュアルで紹介。">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sky:#5BC8E8; --red:#E8354A; --gold:#F5C842; --gold-dark:#D4A017;
+  --green:#4CAF7D; --purple:#9B6DD6; --dark:#1A1A2E;
+  --white:#FFFFFF; --cream:#FFFDF5; --wave-blue:#1A6FA8;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Zen Maru Gothic',sans-serif;color:var(--dark);overflow-x:hidden;background:linear-gradient(135deg, #1A1A2E 0%, #16213E 50%, #0F3460 100%);}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(26,26,46,0.92);backdrop-filter:blur(16px);border-bottom:3px solid var(--gold);padding:10px 20px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{display:flex;align-items:center;gap:10px;}
+.nav-logo-text{font-family:'Dela Gothic One',sans-serif;font-size:16px;color:var(--sky);text-shadow:2px 2px 0 var(--wave-blue);line-height:1.2;}
+.nav-logo-sub{font-size:9px;color:rgba(255,255,255,0.5);font-family:'Zen Maru Gothic',sans-serif;letter-spacing:2px;display:block;}
+.nav-back{background:var(--gold);color:var(--dark);padding:8px 16px;border-radius:8px;text-decoration:none;font-weight:600;font-size:12px;transition:transform 0.2s;}
+.nav-back:hover{transform:scale(1.05);}
+
+/* HAMBURGER */
+.hamburger{width:36px;height:36px;display:flex;flex-direction:column;justify-content:center;gap:6px;cursor:pointer;padding:4px;}
+.hamburger span{display:block;height:2px;background:var(--white);border-radius:2px;transition:all 0.3s;}
+.hamburger.open span:nth-child(1){transform:translateY(8px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg);}
+
+/* DRAWER MENU */
+.drawer{position:fixed;top:0;right:-100%;width:80%;max-width:320px;height:100vh;background:rgba(20,20,40,0.98);backdrop-filter:blur(20px);z-index:300;transition:right 0.35s ease;padding:80px 32px 100px;border-left:3px solid var(--gold);overflow-y:auto;}
+.drawer.open{right:0;}
+.drawer-overlay{position:fixed;top:0;left:0;right:0;bottom:0;z-index:290;background:rgba(0,0,0,0.5);display:none;}
+.drawer-overlay.open{display:block;}
+.drawer-menu{list-style:none;display:flex;flex-direction:column;gap:0;}
+.drawer-menu li{border-bottom:1px solid rgba(255,255,255,0.1);}
+.drawer-menu a{display:block;padding:18px 0;color:var(--white);text-decoration:none;font-size:15px;font-weight:500;transition:color 0.2s;}
+.drawer-menu a:hover{color:var(--gold);}
+
+/* HEADER */
+.gallery-header{position:relative;z-index:1;min-height:40vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:100px 20px 60px;text-align:center;}
+.gallery-header h1{font-family:'Dela Gothic One',sans-serif;font-size:clamp(28px,6vw,44px);color:var(--white);margin-bottom:16px;animation:fadeUp 0.8s ease 0.2s both;}
+.gallery-header p{font-size:clamp(14px,3vw,16px);color:rgba(255,255,255,0.9);margin-bottom:20px;animation:fadeUp 0.8s ease 0.3s both;line-height:1.6;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+/* GALLERY */
+.gallery-container{position:relative;z-index:1;max-width:1000px;margin:40px auto;padding:40px 20px;}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;margin:40px 0;}
+.poster-card{background:var(--white);border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.2);transition:transform 0.2s,box-shadow 0.2s;}
+.poster-card:hover{transform:translateY(-8px);box-shadow:0 16px 48px rgba(0,0,0,0.3);}
+.poster-image{width:100%;height:auto;display:block;background:linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);}
+.poster-info{padding:24px;}
+.poster-title{font-family:'Dela Gothic One',sans-serif;font-size:16px;color:var(--dark);margin-bottom:12px;text-align:center;}
+.poster-desc{font-size:13px;color:#666;line-height:1.6;text-align:center;}
+
+/* ABOUT POSTERS */
+.about-section{position:relative;z-index:1;background:var(--white);margin:60px 0;padding:40px 20px;border-radius:20px;box-shadow:0 8px 32px rgba(0,0,0,0.08);}
+.container{max-width:1000px;margin:0 auto;}
+.about-section h2{font-family:'Dela Gothic One',sans-serif;font-size:24px;color:var(--dark);margin-bottom:32px;text-align:center;border-bottom:3px solid var(--gold);padding-bottom:20px;}
+.about-content{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;}
+.about-text h3{font-family:'Dela Gothic One',sans-serif;font-size:18px;color:var(--dark);margin:16px 0 12px;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:8px;}
+.about-text p{font-size:14px;line-height:1.8;color:#555;margin-bottom:16px;}
+.about-visual{background:linear-gradient(135deg, rgba(91,200,232,0.15) 0%, rgba(155,109,214,0.15) 100%);border:2px dashed var(--gold);border-radius:12px;padding:40px;text-align:center;font-size:48px;}
+
+/* FOOTER */
+footer{position:relative;z-index:1;background:var(--dark);color:var(--white);padding:40px 20px;text-align:center;margin-top:60px;}
+footer p{font-size:12px;opacity:0.7;}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .gallery-grid{grid-template-columns:1fr;}
+  .about-content{grid-template-columns:1fr;}
+  nav{padding:10px 10px;}
+  .nav-logo-text{font-size:14px;}
+  .nav-back{font-size:11px;padding:6px 12px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-logo">
+    <div class="nav-logo-text">マネぼう<span class="nav-logo-sub">ポスター</span></div>
+  </div>
+  <div style="display:flex;gap:10px;align-items:center;">
+    <a href="index.html" class="nav-back">← 戻る</a>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- DRAWER MENU -->
+<div class="drawer-overlay" id="overlay"></div>
+<div class="drawer" id="drawer">
+  <ul class="drawer-menu">
+    <li><a href="index.html">ホーム</a></li>
+    <li><a href="index.html#concept">全体コンセプト</a></li>
+    <li><a href="index.html#characters">4キャラクター</a></li>
+    <li><a href="index.html#world">ワールド</a></li>
+    <li><a href="gallery.html">📋 <ruby>政策<rt>せいさく</rt></ruby><ruby>ポスター<rt>ぽすたー</rt></ruby></a></li>
+  </ul>
+</div>
+
+<!-- HEADER -->
+<section class="gallery-header">
+  <h1><ruby>政策<rt>せいさく</rt></ruby><ruby>ポスター<rt>ぽすたー</rt></ruby></h1>
+  <p>マネぼう構想2026の各<ruby>キャラクター<rt>きゃらくたー</rt></ruby>が<ruby>提唱<rt>ていしょう</rt></ruby>する<br><ruby>政策<rt>せいさく</rt></ruby>や<ruby>方針<rt>ほうしん</rt></ruby>をビジュアルで紹介</p>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-container">
+  <h2 style="font-family:'Dela Gothic One',sans-serif;text-align:center;color:var(--white);margin-bottom:40px;font-size:28px;">🎨 <ruby>ポスター<rt>ぽすたー</rt></ruby>一覧</h2>
+  <div class="gallery-grid">
+    <div class="poster-card">
+      <img src="images/オール局長政策ポス1.png" alt="オール局長政策ポスター1" class="poster-image">
+      <div class="poster-info">
+        <div class="poster-title">オール<ruby>局長<rt>きょくちょう</rt></ruby><ruby>政策<rt>せいさく</rt></ruby>ポスター1</div>
+        <p class="poster-desc"><ruby>金銭<rt>きんせん</rt></ruby>管理と<ruby>資産<rt>しさん</rt></ruby>構築についての<ruby>方針<rt>ほうしん</rt></ruby></p>
+      </div>
+    </div>
+
+    <div class="poster-card">
+      <img src="images/オール局長政策ポス2.png" alt="オール局長政策ポスター2" class="poster-image">
+      <div class="poster-info">
+        <div class="poster-title">オール<ruby>局長<rt>きょくちょう</rt></ruby><ruby>政策<rt>せいさく</rt></ruby>ポスター2</div>
+        <p class="poster-desc"><ruby>起業<rt>きぎょう</rt></ruby>と<ruby>事業<rt>じぎょう</rt></ruby>展開についての<ruby>ビジョン<rt>びじょん</rt></ruby></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="about-section">
+  <div class="container">
+    <h2>ポスター集について</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <h3>🎯 <ruby>政策<rt>せいさく</rt></ruby>ポスターの役割</h3>
+        <p><ruby>各キャラクター<rt>かくきゃらくたー</rt></ruby>が<ruby>提唱<rt>ていしょう</rt></ruby>する<ruby>政策<rt>せいさく</rt></ruby>や<ruby>方針<rt>ほうしん</rt></ruby>は、単なる教育内容ではなく、ワールドの中で実現する<ruby>具体的<rt>ぐたいてき</rt></ruby>な<ruby>施策<rt>しさく</rt></ruby>です。</p>
+        <h3>📢 ビジュアル発信</h3>
+        <p>このポスター集は、マネぼう2026の<ruby>世界観<rt>せかいかん</rt></ruby>を<ruby>対外的<rt>たいがいてき</rt></ruby>に発信し、<ruby>参加者<rt>さんかしゃ</rt></ruby>や<ruby>関心層<rt>かんしんそう</rt></ruby>に<ruby>魅力<rt>みりょく</rt></ruby>を伝える重要な<ruby>媒体<rt>ばいたい</rt></ruby>です。</p>
+        <h3>🌟 随時更新</h3>
+        <p>新しい<ruby>政策<rt>せいさく</rt></ruby>やポスターが完成次第、このページに追加されていきます。定期的にチェックしてください。</p>
+      </div>
+      <div class="about-visual">
+        📊<br><br>各月のテーマに<br>合わせた<br>ポスター群
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2026 マネぼう構想 | <ruby>政策<rt>せいさく</rt></ruby>ポスター集 | Powered by RAINY BRAIN</p>
+</footer>
+
+<script>
+// HAMBURGER MENU
+const hamburger = document.getElementById('hamburger');
+const drawer = document.getElementById('drawer');
+const overlay = document.getElementById('overlay');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  drawer.classList.toggle('open');
+  overlay.classList.toggle('open');
+});
+
+overlay.addEventListener('click', () => {
+  hamburger.classList.remove('open');
+  drawer.classList.remove('open');
+  overlay.classList.remove('open');
+});
+
+drawer.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    drawer.classList.remove('open');
+    overlay.classList.remove('open');
+  });
+});
+</script>
+</body>
+</html>
