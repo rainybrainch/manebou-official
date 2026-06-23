@@ -52,8 +52,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(26,26,46,0.9
 
 /* HERO */
 .hero{position:relative;z-index:1;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:100px 20px 60px;text-align:center;}
-.hero h1{font-family:'Dela Gothic One',sans-serif;font-size:clamp(36px,8vw,56px);color:var(--white);margin-bottom:20px;animation:fadeUp 0.8s ease 0.2s both;font-weight:900;letter-spacing:0.08em;text-shadow:4px 4px 12px rgba(0,0,0,0.4);}
-.hero-subtitle{font-size:clamp(15px,3.5vw,20px);color:rgba(255,255,255,0.95);margin-bottom:40px;animation:fadeUp 0.8s ease 0.3s both;line-height:1.8;font-weight:500;}
+.hero h1{font-family:'Dela Gothic One',sans-serif;font-size:clamp(36px,8vw,56px);color:var(--white);margin-bottom:20px;animation:fadeUp 0.8s ease 0.2s both;font-weight:700;letter-spacing:0.08em;text-shadow:4px 4px 12px rgba(0,0,0,0.4);}
+.hero-subtitle{font-size:clamp(15px,3.5vw,20px);color:rgba(255,255,255,0.95);margin-bottom:40px;animation:fadeUp 0.8s ease 0.3s both;line-height:1.8;font-weight:400;}
 .hero-concept{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:500px;margin:40px auto;animation:fadeUp 0.8s ease 0.4s both;}
 .concept-card{background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);border:2px solid rgba(255,255,255,0.2);border-radius:16px;padding:20px;color:var(--white);}
 .concept-card-title{font-family:'Dela Gothic One',sans-serif;font-size:24px;margin-bottom:8px;}
@@ -70,18 +70,18 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(26,26,46,0.9
 section{position:relative;z-index:1;background:var(--white);margin:60px auto;padding:80px 40px;border-radius:28px;box-shadow:0 16px 56px rgba(0,0,0,0.12);max-width:1200px;transform:translateY(0);transition:all 0.4s ease;animation:slideInUp 0.7s ease-out;border:2px solid rgba(245,200,66,0.08);}
 section:hover{box-shadow:0 20px 72px rgba(0,0,0,0.15);}
 .container{max-width:1200px;margin:0 auto;}
-section h2{font-family:'Dela Gothic One',sans-serif;font-size:clamp(36px,8vw,52px);color:var(--dark);margin-bottom:56px;text-align:center;border-bottom:5px solid var(--gold);padding-bottom:32px;letter-spacing:0.08em;font-weight:900;}
+section h2{font-family:'Dela Gothic One',sans-serif;font-size:clamp(36px,8vw,52px);color:var(--dark);margin-bottom:56px;text-align:center;border-bottom:5px solid var(--gold);padding-bottom:32px;letter-spacing:0.08em;font-weight:700;}
 @keyframes slideInUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
 
 /* SECTION: CONCEPT */
 .concept-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;margin:40px 0;}
-.concept-text h3{font-family:'Dela Gothic One',sans-serif;font-size:24px;color:var(--text-primary);margin:28px 0 16px;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:10px;font-weight:900;letter-spacing:0.05em;}
-.concept-text p{font-size:15px;line-height:2;color:var(--text-secondary);margin-bottom:20px;font-weight:500;}
+.concept-text h3{font-family:'Dela Gothic One',sans-serif;font-size:24px;color:var(--text-primary);margin:28px 0 16px;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:10px;font-weight:700;letter-spacing:0.05em;}
+.concept-text p{font-size:15px;line-height:2;color:var(--text-secondary);margin-bottom:20px;font-weight:400;}
 .concept-chars{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
 .char-card{background:linear-gradient(135deg, rgba(91,200,232,0.15) 0%, rgba(155,109,214,0.15) 100%);border:3px solid rgba(91,200,232,0.4);border-radius:20px;padding:28px;text-align:center;transition:all 0.3s ease;}
 .char-card:hover{border-color:var(--sky);box-shadow:0 8px 24px rgba(91,200,232,0.2);}
-.char-card-name{font-family:'Dela Gothic One',sans-serif;font-size:20px;color:var(--dark);margin-bottom:10px;font-weight:900;}
-.char-card-role{font-size:13px;color:#666;font-weight:700;letter-spacing:0.05em;}
+.char-card-name{font-family:'Dela Gothic One',sans-serif;font-size:20px;color:var(--dark);margin-bottom:10px;font-weight:700;}
+.char-card-role{font-size:13px;color:#666;font-weight:600;letter-spacing:0.05em;}
 
 /* SECTION: FLOW */
 .flow-diagram{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin:40px 0;}
@@ -91,7 +91,7 @@ section h2{font-family:'Dela Gothic One',sans-serif;font-size:clamp(36px,8vw,52p
 .flow-step:hover::before{opacity:1;}
 .flow-step-num{display:inline-block;background:rgba(255,255,255,0.4);width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:14px;box-shadow:0 6px 16px rgba(0,0,0,0.18);transition:transform 0.4s;}
 .flow-step:hover .flow-step-num{transform:scale(1.15);}
-.flow-step p{font-size:14px;line-height:1.8;font-weight:500;letter-spacing:0.03em;}
+.flow-step p{font-size:14px;line-height:1.8;font-weight:400;letter-spacing:0.03em;}
 
 /* SECTION: CHARACTER MONTHLY */
 .monthly-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px;margin:40px 0;}
@@ -99,9 +99,9 @@ section h2{font-family:'Dela Gothic One',sans-serif;font-size:clamp(36px,8vw,52p
 .monthly-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.8) 100%);opacity:0;transition:opacity 0.3s;}
 .monthly-card:hover{transform:translateY(-12px) scale(1.03);box-shadow:0 16px 48px rgba(245,200,66,0.25);border-color:var(--gold-dark);}
 .monthly-card:hover::before{opacity:1;}
-.monthly-card h4{font-family:'Dela Gothic One',sans-serif;font-size:20px;color:var(--dark);margin-bottom:14px;font-weight:900;}
-.monthly-label{display:inline-block;background:linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);color:var(--dark);padding:8px 16px;border-radius:20px;font-size:12px;font-weight:800;margin-bottom:14px;box-shadow:0 4px 12px rgba(245,200,66,0.3);}
-.monthly-desc{font-size:13px;color:#555;line-height:1.8;font-weight:500;}
+.monthly-card h4{font-family:'Dela Gothic One',sans-serif;font-size:20px;color:var(--dark);margin-bottom:14px;font-weight:700;}
+.monthly-label{display:inline-block;background:linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);color:var(--dark);padding:8px 16px;border-radius:20px;font-size:12px;font-weight:600;margin-bottom:14px;box-shadow:0 4px 12px rgba(245,200,66,0.3);}
+.monthly-desc{font-size:13px;color:#555;line-height:1.8;font-weight:400;}
 
 /* SECTION: WORLD */
 .world-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;margin:40px 0;}
@@ -120,8 +120,8 @@ section h2{font-family:'Dela Gothic One',sans-serif;font-size:clamp(36px,8vw,52p
 .value-card:hover::after{opacity:1;}
 .value-icon{font-size:52px;margin-bottom:18px;display:inline-block;transition:all 0.4s cubic-bezier(0.25,0.46,0.45,0.94);}
 .value-card:hover .value-icon{transform:scale(1.2) rotate(8deg);}
-.value-card h4{font-family:'Dela Gothic One',sans-serif;font-size:17px;color:var(--text-primary);margin-bottom:14px;font-weight:900;letter-spacing:0.05em;}
-.value-card p{font-size:13px;color:var(--text-secondary);line-height:1.8;font-weight:500;}
+.value-card h4{font-family:'Dela Gothic One',sans-serif;font-size:17px;color:var(--text-primary);margin-bottom:14px;font-weight:700;letter-spacing:0.05em;}
+.value-card p{font-size:13px;color:var(--text-secondary);line-height:1.8;font-weight:400;}
 
 /* CTA */
 .cta-section{background:linear-gradient(135deg, #5BC8E8 0%, #1A96D8 35%, #0a5a9e 70%, #0a3d63 100%);color:var(--white);text-align:center;padding:100px 40px;border-radius:32px;margin:80px auto;max-width:1000px;box-shadow:0 20px 72px rgba(91,200,232,0.35),inset 0 1px 0 rgba(255,255,255,0.2);position:relative;overflow:hidden;border:2px solid rgba(255,255,255,0.15);}
